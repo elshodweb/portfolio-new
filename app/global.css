@@ -1,0 +1,32 @@
+body {
+  background: rgb(224, 249, 255);
+  background: radial-gradient(
+    circle,
+    rgba(224, 249, 255, 1) 0%,
+    rgba(241, 255, 232, 1) 42%,
+    rgba(254, 235, 255, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+.cursor {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  left: -100px;
+  top: -100px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.3s ease, height 0.3s ease;
+  backdrop-filter: invert(100%);
+}
+
+.cursor.on-element {
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 768px) {
+  .cursor {
+    display: none; 
+  }
+}

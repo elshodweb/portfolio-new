@@ -1,0 +1,44 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.title, .message, .link {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards; /* Apply the same fade-in animation to each element */
+}
+
+.title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+  animation-delay: 0.1s; /* Delay the title animation slightly */
+}
+
+.message {
+  font-size: 20px;
+  color: #666;
+  animation-delay: 0.3s; 
+}
+
+.link {
+  font-size: 20px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  animation-delay: 0.5s; 
+}
+
+.link:hover {
+  color: #0056b3;
+}

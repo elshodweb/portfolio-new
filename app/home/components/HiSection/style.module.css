@@ -1,0 +1,103 @@
+/* introduction.module.css */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  animation: fadeIn 1s ease-in-out; /* Add fadeIn animation */
+}
+
+.profileImage {
+  width: 50%; /* Adjust the width of the image */
+  max-width: 650px; /* Limit the maximum width of the image */
+  height: auto; /* Automatically adjust height */
+  border-radius: 50%; /* Make the image round */
+  margin-right: 20px;
+}
+
+.textContent {
+  max-width: 600px;
+  overflow: hidden;
+  /* Limit the width of the text content */
+}
+
+.textContent h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  animation: slideInLeft 0.5s ease-in-out; /* Add slideInLeft animation */
+  color: #333; /* Change text color */
+}
+
+.textContent h2 {
+  font-size: 24px;
+  color: #888;
+  margin-bottom: 20px;
+  animation: slideInLeft 1s ease-in-out; /* Add slideInLeft animation */
+}
+
+.textContent p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555; /* Change text color */
+  max-width: 400px; /* Limit the width of paragraphs */
+  animation: slideInLeft 1.5s ease-in-out; /* Add slideInLeft animation */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+    text-align: center; /* Center align text */
+  }
+
+  .profileImage {
+    width: 100%; /* Adjust width to 100% on mobile */
+    margin-right: 0; /* Remove right margin on mobile */
+    margin-bottom: 20px; /* Add bottom margin on mobile */
+  }
+
+  .textContent {
+    text-align: center;
+    margin: 0 auto;
+    max-width: none; /* Remove max-width on mobile */
+  }
+  .textContent * {
+    animation: slideInLeft 0s ease-in-out;
+  }
+
+  .textContent h1,
+  .textContent h2,
+  .textContent p {
+    text-align: center; /* Center align text on mobile */
+    animation: none;
+  }
+
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
