@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-
+import styled from './style.module.css';
 interface TitleProps {
   children: ReactNode;
   className?: string;
@@ -12,7 +12,7 @@ const Title: React.FC<TitleProps> = ({
   element = "h1",
 }) => {
   const Element = element || "h1";
-  return <Element className={className}>{children}</Element>;
+  return <Element className={`${className} ${styled.title}`}>{children}</Element>;
 };
 
 export default Title;

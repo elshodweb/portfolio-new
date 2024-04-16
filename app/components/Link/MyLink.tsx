@@ -1,20 +1,21 @@
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 import module from "./style.module.css";
 import Link from "next/link";
 
 interface MyLinkProps {
   children: ReactNode;
   href: string;
-  className?: string; // Allow className to be optionally passed
+  className?: string;
+  onClick?:MouseEventHandler<HTMLAnchorElement> | undefined // Allow className to be optionally passed
 }
 
-const MyLink: React.FC<MyLinkProps> = ({ children, href, className }) => {
+const MyLink: React.FC<MyLinkProps> = ({ children, href, className ,onClick}) => {
   // Join the provided className with module classes
   const combinedClassName = `${module.link} ${className || ""}`;
-  console.log(combinedClassName);
+  
 
   return (
-    <Link data-element="link" href={href} className={combinedClassName.trim()}>
+    <Link onClick={onClick} data-element="link" href={href} className={combinedClassName.trim()}>
       {children}
     </Link>
   );

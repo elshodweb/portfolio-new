@@ -1,4 +1,9 @@
+* {
+  box-sizing: border-box;
+}
 body {
+  padding: 0;
+  margin: 0;
   background: rgb(224, 249, 255);
   background: radial-gradient(
     circle,
@@ -19,14 +24,19 @@ body {
   pointer-events: none;
   transition: width 0.3s ease, height 0.3s ease;
   backdrop-filter: invert(100%);
+  z-index: 1;
 }
 
 .cursor.on-element {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
 }
-@media (max-width: 768px) {
+@media (max-width: 630px) {
   .cursor {
-    display: none; 
+    display: none;
   }
+}
+
+.template {
+  padding-top: 100px;
 }

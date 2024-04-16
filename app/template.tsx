@@ -22,10 +22,11 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
     window.addEventListener("mousemove", (e) => {
       if (cursorRef.current) {
-        cursorRef.current.style.top = e.pageY + "px";
-        cursorRef.current.style.left = e.pageX + "px";
+        cursorRef.current.style.top = e.clientY + "px";
+        cursorRef.current.style.left = e.clientX + "px";
       }
     });
+    
 
     // Очистка обработчиков событий при размонтировании компонента
     return () => {
@@ -36,7 +37,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
     };
   }, []);
   return (
-    <div>
+    <div className="template">
       {children}
       <div ref={cursorRef} className="cursor"></div>
     </div>

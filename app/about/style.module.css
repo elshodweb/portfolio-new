@@ -1,0 +1,95 @@
+.about {
+  overflow: hidden;
+}
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: imgAnimation 0.8s ease-in-out;
+}
+.desc {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: justify;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  /* opacity: 0; */
+}
+.desc:nth-last-of-type(2) {
+  animation: textAppera 1.2s ease-in-out;
+}
+
+.desc:nth-last-of-type(1) {
+  animation: textAppera 1.4s ease-in-out;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.img {
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  animation: shadow-pulse 8s infinite alternate;
+}
+.img img {
+  border-radius: 50%;
+  overflow: hidden;
+  animation: imgAnimation 1s ease;
+}
+
+@keyframes textAppera {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes imgAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 10px 10px 10px 0px #c9ffa2, -10px -10px 10px 0px #b994ff,
+      -10px 10px 10px 0px #abd1ff, 10px -10px 10px 0px #f3ff8a;
+  }
+  25% {
+    box-shadow: 10px 10px 10px 0px #f3ff8a, -10px -10px 10px 0px #c9ffa2,
+      -10px 10px 10px 0px #b994ff, 10px -10px 10px 0px #abd1ff;
+  }
+  50% {
+    box-shadow: 10px 10px 10px 0px #abd1ff, -10px -10px 10px 0px #f3ff8a,
+      -10px 10px 10px 0px #c9ffa2, 10px -10px 10px 0px #b994ff;
+  }
+  75% {
+    box-shadow: 10px 10px 10px 0px #b994ff, -10px -10px 10px 0px #abd1ff,
+      -10px 10px 10px 0px #f3ff8a, 10px -10px 10px 0px #c9ffa2;
+  }
+  100% {
+    box-shadow: 10px 10px 10px 0px #c9ffa2, -10px -10px 10px 0px #b994ff,
+      -10px 10px 10px 0px #abd1ff, 10px -10px 10px 0px #f3ff8a;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .title {
+    margin-bottom: 10px;
+  }
+  .row {
+    flex-direction: column-reverse;
+  }
+}

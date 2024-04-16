@@ -1,50 +1,46 @@
-/* introduction.module.css */
-
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 50px 0;
-  animation: fadeIn 1s ease-in-out; /* Add fadeIn animation */
+  animation: fadeIn 1s ease-in-out;
 }
-
 .profileImage {
-  width: 50%; /* Adjust the width of the image */
-  max-width: 650px; /* Limit the maximum width of the image */
-  height: auto; /* Automatically adjust height */
-  border-radius: 50%; /* Make the image round */
+  width: 50%;
+  max-width: 650px;
+  height: auto;
+  border-radius: 50%;
   margin-right: 20px;
 }
 
 .textContent {
   max-width: 600px;
   overflow: hidden;
-  /* Limit the width of the text content */
 }
 
 .textContent h1 {
   font-size: 36px;
   margin-bottom: 10px;
-  animation: slideInLeft 0.5s ease-in-out; /* Add slideInLeft animation */
-  color: #333; /* Change text color */
+  animation: slideInLeft 0.5s ease-in-out;
+  color: #333;
 }
 
 .textContent h2 {
   font-size: 24px;
   color: #888;
   margin-bottom: 20px;
-  animation: slideInLeft 1s ease-in-out; /* Add slideInLeft animation */
+  animation: slideInLeft 1s ease-in-out;
 }
 
 .textContent p {
   font-size: 18px;
   line-height: 1.5;
-  color: #555; /* Change text color */
-  max-width: 400px; /* Limit the width of paragraphs */
-  animation: slideInLeft 1.5s ease-in-out; /* Add slideInLeft animation */
+  color: #555;
+  max-width: 400px;
+  text-align: justify;
+  animation: slideInLeft 1.5s ease-in-out;
 }
 
-/* Animation keyframes */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -65,21 +61,22 @@
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-    align-items: flex-start; /* Align items to the start */
-    text-align: center; /* Center align text */
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
   }
 
   .profileImage {
-    width: 100%; /* Adjust width to 100% on mobile */
-    margin-right: 0; /* Remove right margin on mobile */
-    margin-bottom: 20px; /* Add bottom margin on mobile */
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin: 0 auto;
   }
 
   .textContent {
     text-align: center;
     margin: 0 auto;
-    max-width: none; /* Remove max-width on mobile */
+    max-width: none;
   }
   .textContent * {
     animation: slideInLeft 0s ease-in-out;
@@ -88,7 +85,7 @@
   .textContent h1,
   .textContent h2,
   .textContent p {
-    text-align: center; /* Center align text on mobile */
+    text-align: center;
     animation: none;
   }
 
