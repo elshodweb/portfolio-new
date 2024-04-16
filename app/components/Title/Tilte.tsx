@@ -12,7 +12,7 @@ const Title: React.FC<TitleProps> = ({
   element = "h1",
 }) => {
   const Element = element || "h1";
-  return <Element className={`${className} ${styled.title}`}>{children}</Element>;
+  return <Element data-element='title' className={`${className} ${styled.title}`}>{children}</Element>;
 };
 
 export default Title;

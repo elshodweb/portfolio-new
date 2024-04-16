@@ -4,7 +4,7 @@ import styles from "./style.module.css";
 
 const Hi = () => {
   return (
-    <div className={styles.container}>
+    <div id="#home" className={styles.container}>
       <Image
         src="/me.png"
         width={920}
@@ -13,7 +13,7 @@ const Hi = () => {
         className={styles.profileImage}
       />
       <div className={styles.textContent}>
-        <h1>Hello, I'm Elshod 🧑‍💻</h1>
+        <h1 data-element='title'>Hello, I'm Elshod 🧑‍💻</h1>
         <h2>Frontend Developer & UI/UX Enthusiast</h2>
         <p>
           Welcome to my portfolio! I specialize in creating engaging and

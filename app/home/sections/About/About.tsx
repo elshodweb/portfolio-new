@@ -1,17 +1,17 @@
 import Container from "@/app/components/Container/Container";
-import Title from "../components/Title/Tilte";
+import Title from "../../../components/Title/Tilte";
 import style from "./style.module.css";
 import Image from "next/image";
 const About = () => {
   return (
-    <div className={style.about}>
+    <div id="#about" className={style.about}>
       <Container>
         <Title className={style.title}>About me 🕵️</Title>
-        <div className={style.row}>
+        <div   className={style.row}>
           <div className={style.img}>
-            <Image src={"/myImg.jpg"} width={300} height={300} alt="myImg" />
+            <Image  src={"/myImg.jpg"} width={300} height={300} alt="myImg" />
           </div>
-          <div className={style.text}>
+          <div   className={style.text}>
             <p className={style.desc}>
               Hey there! 👋 I'm Elshod Tukhtamurodov, a third-year student
               studying Informational Technology at Tashkent University. I'm

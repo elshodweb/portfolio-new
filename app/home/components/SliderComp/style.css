@@ -1,0 +1,84 @@
+.slider-comp {
+  padding: 100px 0;
+  margin-bottom: 100px;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  padding: 30px;
+  background: url(./icons/arrow.png) center/ 60% no-repeat;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  transition: all 0.1s ease-in;
+}
+.swiper-button-prev {
+  transform: translateY(-50%) scaleX(-1);
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  padding: 40px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+/* Стилизация пагинации */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}

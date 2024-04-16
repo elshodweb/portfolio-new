@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
 }
+html,
+body {
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+}
 body {
   padding: 0;
   margin: 0;

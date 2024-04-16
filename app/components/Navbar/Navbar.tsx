@@ -34,20 +34,20 @@ function Navbar() {
           <span></span>
         </div>
         <nav className={`${styled.navbar} ${isOpen ? styled.active : ""}`}>
-          <MyLink onClick={closeMenu} className={styled.link} href={"/"}>
+          <MyLink onClick={closeMenu} className={styled.link} href={"#home"}>
             Home
           </MyLink>
-          <MyLink onClick={closeMenu} className={styled.link} href={"/about"}>
+          <MyLink onClick={closeMenu} className={styled.link} href={"#about"}>
             About
           </MyLink>
           <MyLink
             onClick={closeMenu}
             className={styled.link}
-            href={"/portfolio"}
+            href={"#portfolio"}
           >
             Portfolio
           </MyLink>
-          <MyLink onClick={closeMenu} className={styled.link} href={"/contact"}>
+          <MyLink onClick={closeMenu} className={styled.link} href={"#contact"}>
             Contact
           </MyLink>
         </nav>
