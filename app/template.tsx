@@ -37,7 +37,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
     };
   }, []);
   return (
-    <div className="template">
+    <div id="home" className="template">
       {children}
       <div ref={cursorRef} className="cursor"></div>
     </div>

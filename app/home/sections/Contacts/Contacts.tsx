@@ -5,7 +5,7 @@ import Container from "@/app/components/Container/Container";
 import Link from "next/link";
 const Contacts = () => {
   return (
-    <div className={style.wrapper}>
+    <div id="contact" className={style.wrapper}>
       <Container>
         <Title className={style.title}>Contacts 📞</Title>
         <div className={style.row}>

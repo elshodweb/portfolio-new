@@ -6,8 +6,8 @@ import SliderComp from "../../components/SliderComp/SliderComp";
 
 const Portfolio = () => {
   return (
-    <div id="#portfolio" className={style.portfolio}>      
-    <Container>
+    <div id="portfolio" className={style.portfolio}>
+      <Container>
         <Title className={style.title}>Portfolio 💼</Title>
         <SliderComp />
       </Container>

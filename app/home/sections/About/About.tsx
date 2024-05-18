@@ -4,7 +4,7 @@ import style from "./style.module.css";
 import Image from "next/image";
 const About = () => {
   return (
-    <div id="#about" className={style.about}>
+    <div id="about" className={style.about}>
       <Container>
         <Title className={style.title}>About me 🕵️</Title>
         <div   className={style.row}>
