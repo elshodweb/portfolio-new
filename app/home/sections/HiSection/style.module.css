@@ -4,6 +4,7 @@
   justify-content: center;
   padding: 50px 0;
   animation: fadeIn 1s ease-in-out;
+  text-shadow: 5px 5px 5px  #00000064;
 }
 .profileImage {
   width: 50%;

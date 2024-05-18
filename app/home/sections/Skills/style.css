@@ -1,5 +1,6 @@
 .skill-section {
   padding: 50px;
+  text-shadow: 5px 5px 5px  #00000064;
   .title {
     text-align: center;
   }
